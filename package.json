@@ -2,18 +2,16 @@
   "name": "nextless-infra",
   "version": "0.1.0",
   "scripts": {
-    "test": "sst test",
-    "start": "sst start",
     "build": "sst build",
     "deploy": "sst deploy",
-    "remove": "sst remove"
+    "remove": "sst remove",
+    "test": "sst test"
   },
   "devDependencies": {
     "@types/dotenv-flow": "^3.2.0"
   },
   "dependencies": {
-    "@aws-cdk/aws-dynamodb": "^1.120.0",
-    "@aws-cdk/core": "1.120.0",
+    "@aws-cdk/core": "1.114.0",
     "@serverless-stack/cli": "0.40.5",
     "@serverless-stack/resources": "0.40.5",
     "dotenv-flow": "^3.2.0"
