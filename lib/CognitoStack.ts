@@ -19,16 +19,16 @@ export default class CognitoStack extends Stack {
 
     const userPool = new UserPool(this, "UserPool", {
       selfSignUpEnabled: false,
-      autoVerify: { email: true },
       signInAliases: { email: true },
+      signInCaseSensitive: false,
       userPoolName: scope.logicalPrefixedName("userpool"),
     });
 
-      userPool.addDomain("CognitoDomain", {
-        cognitoDomain: {
-          domainPrefix: Env.getValue("USER_POOL_DOMAIN"),
-        },
-      });
+    userPool.addDomain("CognitoDomain", {
+      cognitoDomain: {
+        domainPrefix: Env.getValue("USER_POOL_DOMAIN"),
+      },
+    });
 
     const identityGoogle = new UserPoolIdentityProviderGoogle(
       this,
