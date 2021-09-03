@@ -26,10 +26,7 @@
     "allowSyntheticDefaultImports": false, // Follow sst way to import
     "allowJs": false,
     "skipLibCheck": true,
-    "forceConsistentCasingInFileNames": true,
-
-    "experimentalDecorators": true,
-    "typeRoots": ["./node_modules/@types"]
+    "forceConsistentCasingInFileNames": true
   },
   "include": ["lib"]
 }

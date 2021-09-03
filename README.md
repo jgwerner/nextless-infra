@@ -20,6 +20,12 @@ npm run deploy
 
 (optional) You can try Seed.run for an automatic backend deployment integrated to your GitHub workflow.
 
+### Customization
+
+You can easily configure Nextless by making a search in the whole project with `FIXME:` for making quick customization.
+
+You have access to the whole code source if you need further customization. The provided code is only example for you to start your SaaS products. The sky is the limit 🚀.
+
 ### Going further with third party tool (optional)
 
 - Add Seed.run for automatic deployment integrated to your GitHub workflow.

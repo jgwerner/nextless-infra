@@ -30,6 +30,8 @@ export default class CognitoStack extends Stack {
       },
     });
 
+    // FIXME: We only support Google and Facebook in the example Todo app
+    // But, you can more identity provider like Apple or Amazon
     const identityGoogle = new UserPoolIdentityProviderGoogle(
       this,
       "UserPoolIdentityGoogle",
