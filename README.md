@@ -2,6 +2,8 @@
 
 Nextless.js Infra is needed for setting up infrastructure on Cloud. It include code for automatically configuring AWS Cognito and DynamoDB without any manual intervention to your AWS account. The repository isn't needed for local development.
 
+The Nextless-infra handles the long-living/long-term/slowly-changing infrastructure. In the opposite, Nextless-backend focuses on often-updated business logic. By separating into 2 repos, it drastically cuts down the deployment time.
+
 ### Requirements
 
 - Node.js and npm
