@@ -72,7 +72,7 @@ export default class CognitoStack extends Stack {
           OAuthScope.PROFILE,
           OAuthScope.COGNITO_ADMIN,
         ],
-        callbackUrls: [`${Env.getValue("WEB_DOMAIN")}/dashboard`],
+        callbackUrls: [`${Env.getValue("WEB_DOMAIN")}/dashboard/`],
         logoutUrls: [`${Env.getValue("WEB_DOMAIN")}`],
       },
       supportedIdentityProviders: [
