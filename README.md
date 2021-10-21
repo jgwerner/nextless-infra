@@ -8,6 +8,15 @@ The Nextless-infra handles the long-living/long-term/slowly-changing infrastruct
 
 - Node.js and npm
 
+### Getting started
+
+Run the following command on your local environment after cloning the project:
+
+```
+cd my-project-name-infra
+npm install
+```
+
 ### Deploy to production
 
 If you deploy for the first time, please checkout [this guide](https://github.com/Nextlessjs/Quick-Start/blob/main/PRODUCTION_DEPLOYMENT.md).
