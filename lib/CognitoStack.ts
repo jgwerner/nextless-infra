@@ -32,14 +32,14 @@ export default class CognitoStack extends Stack {
 
     // FIXME: We only support Google and Facebook in the example Todo app.
     // If you want to use Google AND Facebook, you don't need to do anything.
-    // But, you can more identity provider like Apple or Amazon.
+    // But, you can add more identity provider like Apple or Amazon.
     // Or, you can remove some identityProvider if you don't want to support it.
     const identityGoogle = new UserPoolIdentityProviderGoogle(
       this,
       "UserPoolIdentityGoogle",
       {
-        clientId: Env.getValue("GOOGLE_CLIENT_ID"), // The value will automatically retrieve from the environment variable.
-        clientSecret: Env.getValue("GOOGLE_CLIENT_SECRET"), // The value will automatically retrieve from the environment variable.
+        clientId: Env.getValue("GOOGLE_CLIENT_ID"), // The value will automatically retrieve from the environment variables.
+        clientSecret: Env.getValue("GOOGLE_CLIENT_SECRET"), // The value will automatically retrieve from the environment variables.
         userPool: userPool,
         scopes: ["profile", "email", "openid"],
         attributeMapping: {
@@ -52,8 +52,8 @@ export default class CognitoStack extends Stack {
       this,
       "UserPoolIdentityFacebook",
       {
-        clientId: Env.getValue("FACEBOOK_CLIENT_ID"), // The value will automatically retrieve from the environment variable.
-        clientSecret: Env.getValue("FACEBOOK_CLIENT_SECRET"), // The value will automatically retrieve from the environment variable.
+        clientId: Env.getValue("FACEBOOK_CLIENT_ID"), // The value will automatically retrieve from the environment variables.
+        clientSecret: Env.getValue("FACEBOOK_CLIENT_SECRET"), // The value will automatically retrieve from the environment variables.
         userPool: userPool,
         scopes: ["email", "public_profile"],
         attributeMapping: {
@@ -88,7 +88,7 @@ export default class CognitoStack extends Stack {
     userPoolClient.node.addDependency(identityFacebook);
 
     const identityPool = new CfnIdentityPool(this, "IdentityPool", {
-      allowUnauthenticatedIdentities: false, // Don't allow unathenticated users
+      allowUnauthenticatedIdentities: false, // Don't allow unauthenticated users
       cognitoIdentityProviders: [
         {
           clientId: userPoolClient.userPoolClientId,
