@@ -35,6 +35,8 @@ You can easily configure Nextless by making a search in the whole project with `
 
 You have access to the whole code source if you need further customization. The provided code is only example for you to start your SaaS products. The sky is the limit 🚀.
 
+For your information, you don't need to customize the `sst.json` file for one project. But, when you have multiple projects, it'll have name collision. So, you need to update the name in `sst.json` file by choosing a new name instead `nextless`. And, don't forget to append the '-infra' at the end of the name.
+
 ### Going further with third party tool (optional)
 
 - Add Seed.run for automatic deployment integrated to your GitHub workflow.
