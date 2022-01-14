@@ -41,6 +41,8 @@ For your information, you don't need to customize the `sst.json` file for one pr
 
 - Add Seed.run for automatic deployment integrated to your GitHub workflow.
 
+For you information, Seed.run doesn't load `.env` files. You need to indicate the environment variable manually in Seed.run user interface, here how to do it: https://seed.run/docs/storing-secrets.html
+
 ### Contributions
 
 Everyone is welcome to contribute to this project. Feel free to open an issue if you have question or found a bug.
