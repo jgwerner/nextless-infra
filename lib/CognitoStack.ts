@@ -18,7 +18,11 @@ export default class CognitoStack extends Stack {
     super(scope, id, props);
 
     const userPool = new UserPool(this, "UserPool", {
-      selfSignUpEnabled: false,
+      selfSignUpEnabled: true,
+      userVerification: {
+        emailSubject: "Your 6-digit verification code",
+        emailBody: "Hi there,<br /><br />This is your verification code:<br /><br />{####}<br /><br />If you believe you have received this email by mistake, feel free to ignore it.<br /><br />Thanks for your time."
+      },
       signInAliases: { email: true },
       signInCaseSensitive: false,
       userPoolName: scope.logicalPrefixedName("userpool"),
