@@ -82,7 +82,7 @@ export default class CognitoStack extends Stack {
         logoutUrls: [`${Env.getValue("FRONTEND_DOMAIN_URL")}`],
       },
       supportedIdentityProviders: [
-        UserPoolClientIdentityProvider.GOOGLE,
+        UserPoolClientIdentityProvider.GOOGLE, // FIXME: Please don't forget to update this list based on the identity provide you want to support.
         UserPoolClientIdentityProvider.FACEBOOK,
       ],
       preventUserExistenceErrors: true,
