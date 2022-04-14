@@ -1,6 +1,6 @@
 import { App, Stack, StackProps } from "@serverless-stack/resources";
-import { CfnOutput } from "@aws-cdk/core";
-import { AttributeType, BillingMode, Table } from "@aws-cdk/aws-dynamodb";
+import { CfnOutput } from "aws-cdk-lib";
+import { AttributeType, BillingMode, Table } from "aws-cdk-lib/aws-dynamodb";
 
 export default class DynamoDBStack extends Stack {
   constructor(scope: App, id: string, props?: StackProps) {
