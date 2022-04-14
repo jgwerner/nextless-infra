@@ -2,10 +2,10 @@
   "name": "nextless-infra",
   "version": "0.1.0",
   "scripts": {
-    "build": "sst build",
-    "deploy": "sst deploy",
-    "remove": "sst remove",
-    "test": "sst test"
+    "build": "sst build --stage prod",
+    "deploy": "sst deploy --stage prod",
+    "remove": "sst remove --stage prod",
+    "test": "sst test --stage prod"
   },
   "devDependencies": {
     "@types/dotenv-flow": "^3.2.0"
