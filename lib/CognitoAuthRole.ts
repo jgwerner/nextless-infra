@@ -1,14 +1,14 @@
-import { Construct } from "@aws-cdk/core";
+import { Construct } from "constructs";
 import {
   Role,
   FederatedPrincipal,
   PolicyStatement,
   Effect,
-} from "@aws-cdk/aws-iam";
+} from "aws-cdk-lib/aws-iam";
 import {
   CfnIdentityPool,
   CfnIdentityPoolRoleAttachment,
-} from "@aws-cdk/aws-cognito";
+} from "aws-cdk-lib/aws-cognito";
 import CognitoStack from "./CognitoStack";
 
 type ICognitoAuthRole = {

@@ -2,18 +2,18 @@
   "name": "nextless-infra",
   "version": "0.1.0",
   "scripts": {
-    "build": "sst build",
-    "deploy": "sst deploy",
-    "remove": "sst remove",
-    "test": "sst test"
+    "build-prod": "sst build --stage prod",
+    "deploy-prod": "sst deploy --stage prod",
+    "remove-prod": "sst remove --stage prod",
+    "test-prod": "sst test --stage prod"
   },
   "devDependencies": {
     "@types/dotenv-flow": "^3.2.0"
   },
   "dependencies": {
-    "@aws-cdk/core": "1.114.0",
-    "@serverless-stack/cli": "0.40.5",
-    "@serverless-stack/resources": "0.40.5",
+    "@serverless-stack/cli": "0.69.6",
+    "@serverless-stack/resources": "0.69.6",
+    "aws-cdk-lib": "2.15.0",
     "dotenv-flow": "^3.2.0"
   },
   "author": "Ixartz (https://github.com/ixartz)",

@@ -1,6 +1,5 @@
 {
   "name": "nextless-infra",
-  "stage": "prod",
   "region": "us-east-1",
   "lint": true,
   "typeCheck": true

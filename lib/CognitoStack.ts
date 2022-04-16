@@ -1,4 +1,4 @@
-import { CfnOutput } from "@aws-cdk/core";
+import { CfnOutput } from "aws-cdk-lib";
 import { App, Stack, StackProps } from "@serverless-stack/resources";
 import {
   UserPool,
@@ -9,7 +9,7 @@ import {
   UserPoolClientIdentityProvider,
   ProviderAttribute,
   OAuthScope,
-} from "@aws-cdk/aws-cognito";
+} from "aws-cdk-lib/aws-cognito";
 import CognitoAuthRole from "./CognitoAuthRole";
 import { Env } from "./utils/Env";
 
