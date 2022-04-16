@@ -7,6 +7,7 @@ config({
 import DynamoDBStack from "./DynamoDBStack";
 import { App } from "@serverless-stack/resources";
 import CognitoStack from "./CognitoStack";
+import SESStack from "./SESStack";
 
 export default function main(app: App): void {
   // Set default runtime for all functions
@@ -17,4 +18,6 @@ export default function main(app: App): void {
   new DynamoDBStack(app, "dynamodb");
 
   new CognitoStack(app, "cognito");
+
+  new SESStack(app, "SES");
 }
