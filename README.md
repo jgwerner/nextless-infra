@@ -12,9 +12,10 @@ The Nextless-infra handles the long-living/long-term/slowly-changing infrastruct
 
 Run the following command on your local environment after cloning the project:
 
-```
+```sh
 cd my-project-name-infra
 npm install
+code . # Open VSCode with command line or open it manually. Please make sure that the file `package.json` is at the root of the project in VSCode. `package.json` should NOT be in a subfolder.
 ```
 
 ### Deploy to production
@@ -24,8 +25,10 @@ If you deploy for the first time, please checkout [this guide](https://github.co
 You can deploy to production with the following command:
 
 ```
-npm run deploy
+npm run deploy-prod
 ```
+
+It's exactly the same command `npm run deploy-prod` when you want to update the infrastructure after making changes.
 
 (optional) You can try Seed.run for an automatic backend deployment integrated to your GitHub workflow.
 
