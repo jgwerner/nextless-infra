@@ -9,6 +9,7 @@ import {
   UserPoolClientIdentityProvider,
   ProviderAttribute,
   OAuthScope,
+  Mfa,
 } from "aws-cdk-lib/aws-cognito";
 import CognitoAuthRole from "./CognitoAuthRole";
 import { Env } from "./utils/Env";
@@ -26,6 +27,11 @@ export default class CognitoStack extends Stack {
       signInAliases: { email: true },
       signInCaseSensitive: false,
       userPoolName: scope.logicalPrefixedName("userpool"),
+      mfa: Mfa.OPTIONAL,
+      mfaSecondFactor: {
+        sms: false, // Arbitrary disabling SMS mfa authentication
+        otp: true,
+      },
     });
 
     userPool.addDomain("CognitoDomain", {
