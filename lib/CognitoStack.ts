@@ -1,5 +1,5 @@
 import { CfnOutput } from "aws-cdk-lib";
-import { App, Stack, StackProps } from "@serverless-stack/resources";
+import { App, Stack } from "sst/constructs";
 import {
   UserPool,
   UserPoolClient,
@@ -15,14 +15,15 @@ import CognitoAuthRole from "./CognitoAuthRole";
 import { Env } from "./utils/Env";
 
 export default class CognitoStack extends Stack {
-  constructor(scope: App, id: string, props?: StackProps) {
-    super(scope, id, props);
+  constructor(scope: App, id: string) {
+    super(scope, id);
 
     const userPool = new UserPool(this, "UserPool", {
       selfSignUpEnabled: true,
       userVerification: {
         emailSubject: "Your 6-digit verification code",
-        emailBody: "Hi there,<br /><br />This is your verification code:<br /><br />{####}<br /><br />If you believe you have received this email by mistake, feel free to ignore it.<br /><br />Thanks for your time."
+        emailBody:
+          "Hi there,<br /><br />This is your verification code:<br /><br />{####}<br /><br />If you believe you have received this email by mistake, feel free to ignore it.<br /><br />Thanks for your time.",
       },
       signInAliases: { email: true },
       signInCaseSensitive: false,

@@ -1,4 +1,3 @@
-import { Construct } from "constructs";
 import {
   Role,
   FederatedPrincipal,
@@ -10,6 +9,7 @@ import {
   CfnIdentityPoolRoleAttachment,
 } from "aws-cdk-lib/aws-cognito";
 import CognitoStack from "./CognitoStack";
+import { Construct } from "constructs";
 
 type ICognitoAuthRole = {
   identityPool: CfnIdentityPool;

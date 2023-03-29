@@ -1,4 +1,4 @@
-import { App, Stack, StackProps } from "@serverless-stack/resources";
+import { App, Stack, StackProps } from "sst/constructs";
 import { CfnOutput } from "aws-cdk-lib";
 import { AttributeType, BillingMode, Table } from "aws-cdk-lib/aws-dynamodb";
 

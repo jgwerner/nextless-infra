@@ -1,5 +1,5 @@
 {
-  "name": "nextless-infra",
+  "name": "modernmern-infra",
   "version": "0.1.0",
   "scripts": {
     "build-prod": "sst build --stage prod",
@@ -9,14 +9,11 @@
   },
   "devDependencies": {
     "@types/dotenv-flow": "^3.2.0",
-    "@types/node": "^18.7.17"
+    "@types/node": "^18.15.11"
   },
   "dependencies": {
-    "@serverless-stack/cli": "1.13.0",
-    "@serverless-stack/resources": "1.13.0",
-    "aws-cdk-lib": "2.39.1",
-    "constructs": "^10.1.271",
-    "dotenv-flow": "^3.2.0"
+    "dotenv-flow": "^3.2.0",
+    "sst": "^2.3.4"
   },
   "author": "Ixartz (https://github.com/ixartz)",
   "private": true
