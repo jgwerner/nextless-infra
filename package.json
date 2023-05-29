@@ -9,11 +9,11 @@
   },
   "devDependencies": {
     "@types/dotenv-flow": "^3.2.0",
-    "@types/node": "^18.15.11"
+    "@types/node": "^20.2.5"
   },
   "dependencies": {
     "dotenv-flow": "^3.2.0",
-    "sst": "^2.3.4"
+    "sst": "^2.10.4"
   },
   "author": "Ixartz (https://github.com/ixartz)",
   "private": true

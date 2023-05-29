@@ -1,4 +1,4 @@
-import { CfnOutput } from "aws-cdk-lib";
+import { CfnOutput, SecretValue } from "aws-cdk-lib";
 import { App, Stack } from "sst/constructs";
 import {
   UserPool,
@@ -50,7 +50,7 @@ export default class CognitoStack extends Stack {
       "UserPoolIdentityGoogle",
       {
         clientId: Env.getValue("GOOGLE_CLIENT_ID"), // The value will automatically retrieve from the environment variables.
-        clientSecret: Env.getValue("GOOGLE_CLIENT_SECRET"), // The value will automatically retrieve from the environment variables.
+        clientSecretValue: SecretValue.unsafePlainText(Env.getValue("GOOGLE_CLIENT_SECRET")), // The value will automatically retrieve from the environment variables.
         userPool: userPool,
         scopes: ["profile", "email", "openid"],
         attributeMapping: {
