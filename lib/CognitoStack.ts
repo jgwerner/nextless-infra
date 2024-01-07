@@ -118,6 +118,11 @@ export default class CognitoStack extends Stack {
       value: userPool.userPoolId,
     });
 
+    new CfnOutput(this, "UserPoolArn", {
+      value: userPool.userPoolArn,
+      exportName: scope.logicalPrefixedName("UserPoolArn"),
+    });
+
     new CfnOutput(this, "UserPoolClientId", {
       value: userPoolClient.userPoolClientId,
     });
