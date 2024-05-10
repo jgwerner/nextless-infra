@@ -7,12 +7,12 @@
     "remove-prod": "sst remove --stage prod"
   },
   "devDependencies": {
-    "@types/dotenv-flow": "^3.2.0",
-    "@types/node": "^20.2.5"
+    "@types/dotenv-flow": "^3.3.3",
+    "@types/node": "^20.12.11"
   },
   "dependencies": {
-    "dotenv-flow": "^3.2.0",
-    "sst": "^2.10.4"
+    "dotenv-flow": "^3.3.0",
+    "sst": "^2.41.5"
   },
   "author": "Ixartz (https://github.com/ixartz)",
   "private": true

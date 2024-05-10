@@ -1,7 +1,8 @@
 import { config } from "dotenv-flow";
 
 config({
-  default_node_env: "production"
+  default_node_env: "production",
+  silent: true,
 });
 
 import type { SSTConfig } from "sst";
